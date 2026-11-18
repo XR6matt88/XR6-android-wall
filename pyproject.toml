@@ -1,0 +1,16 @@
+[project]
+name = "xr6-toolkit"
+version = "0.1.0"
+description = "Aplikasi Android yang menggabungkan xr6-filter-wall dan xr6-pro oleh XR6 Labs HQ."
+requires-python = ">=3.10"
+dependencies = [
+    "flet==1.1.2",
+    "xr6-filter-wall",
+    "xr6-pro",
+]
+
+[tool.flet]
+org = "com.xr6labs"
+product = "XR6 Toolkit"
+company = "XR6 Labs HQ"
+copyright = "Copyright (C) 2026 XR6 Labs HQ"
