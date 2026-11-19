@@ -17,7 +17,7 @@ jobs:
 
       - name: Build Android APK (Flet)
         id: build
-        uses: flet-dev/flet-build-action@74d5761
+        uses: flet-dev/flet-build-action@74d5761ff4f3a249cad826697ac8b36b025f7052
         with:
           target: apk
           runner-python-version: "3.12"
