@@ -14,3 +14,7 @@ org = "com.xr6labs"
 product = "XR6 Toolkit"
 company = "XR6 Labs HQ"
 copyright = "Copyright (C) 2026 XR6 Labs HQ"
+
+[tool.flet.flutter.pubspec.dependency_overrides]
+jni = "1.1.2"
+jni_flutter = "1.0.4+1"
