@@ -17,18 +17,19 @@ jobs:
 
       - name: Build Android APK (Flet)
         id: build
-        uses: flet-dev/flet-build-action@v1
+        uses: flet-dev/flet-build-action@74d5761
         with:
           target: apk
           runner-python-version: "3.12"
           bundled-python-version: "3.12"
           build-number: ${{ github.run_number }}
+          archive-output: "false"
 
       - name: Prepare APK file
         shell: bash
         run: |
           mkdir -p release-apk
-          APK_FILE=$(find "${{ steps.build.outputs.output-path }}" -maxdepth 2 -name "*.apk" | head -n 1)
+          APK_FILE=$(find "${{ steps.build.outputs.output-path }}" -type f -name "*.apk" | head -n 1)
           if [ -z "$APK_FILE" ]; then
             echo "Tiada fail .apk ditemui!"
             exit 1
