@@ -53,8 +53,8 @@ def main(page: ft.Page):
             hash_input,
             ft.Row(
                 [
-                    ft.FilledButton("Kira hash", on_click=do_hash),
-                    ft.OutlinedButton("Semak", on_click=do_verify),
+                    ft.FilledButton(content="Kira hash", on_click=do_hash),
+                    ft.OutlinedButton(content="Semak", on_click=do_verify),
                 ]
             ),
             expected_input,
@@ -82,7 +82,7 @@ def main(page: ft.Page):
             ft.Text("Filter Wall", size=20, weight=ft.FontWeight.BOLD),
             fw_input,
             strict_switch,
-            ft.FilledButton("Periksa", on_click=do_inspect),
+            ft.FilledButton(content="Periksa", on_click=do_inspect),
             fw_out,
         ],
         scroll=ft.ScrollMode.AUTO,
@@ -113,7 +113,7 @@ def main(page: ft.Page):
             ft.Text("Kecekapan Tenaga", size=20, weight=ft.FontWeight.BOLD),
             base_input,
             opt_input,
-            ft.FilledButton("Kira", on_click=do_energy),
+            ft.FilledButton(content="Kira", on_click=do_energy),
             en_out,
         ],
         scroll=ft.ScrollMode.AUTO,
